@@ -1,0 +1,40 @@
+/* pages/classic/classic.wxss */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* justify-content: flex-end; */
+  /* justify-content: flex-start; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* align-items: flex-end; */
+  /* align-items: flex-start; */
+  align-items: baseline;
+}
+
+.container .item {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.title1 {
+  background-color: aqua;
+}
+
+.title2 {
+  background-color: bisque;
+}
+
+.title3 {
+  background-color: cadetblue;
+}
+
+.title3 {
+  background-color: darkorange;
+}
+
+.title4 {
+  background-color: deeppink;
+}
