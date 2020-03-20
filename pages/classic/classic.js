@@ -5,14 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    fav_nums: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let _this = this;
+    wx.request({
+      url: 'http://bl.7yue.pro/v1/classic/latest',
+      data: {
+        appkey: "8QYNcIJS122r0UYgZzK"
+      },
+      success(res) {
+        if(res.statusCode === 200) {
+          let dataLink = res.data;
+          _this.fav_nums = dataLink
+        }
+      }
+    })
   },
 
   /**
