@@ -1,7 +1,2 @@
 <!--pages/classic/classic.wxml-->
-<view class="container">
-  <view class="item title1">111</view>
-  <view class="item title2">222</view>
-  <view class="item title3">333</view>
-  <view class="item title4">444</view>
-</view>
+<v-link/>
