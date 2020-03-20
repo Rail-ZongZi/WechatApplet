@@ -5,24 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-    fav_nums: ''
+    fav_nums: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let _this = this;
-    wx.request({
-      url: 'http://bl.7yue.pro/v1/classic/latest',
-      data: {
-        appkey: "8QYNcIJS122r0UYgZzK"
-      },
-      success(res) {
-        if(res.statusCode === 200) {
-          let dataLink = res.data;
-          _this.fav_nums = dataLink
+    // wx.request({
+    //   url: 'http://bl.7yue.pro/v1/classic/latest',
+    //   header: {
+    //     appkey: "8QYNcIJ2r0UYgZzK"
+    //   },
+    //   success: (res) => {
+    //     let dataLink = res.data;
+    //     if (res.statusCode === 200) {
+    //       this.setData({
+    //         fav_nums: dataLink.fav_nums
+    //       })
+    //     }
+    //   }
+    // })
+    const promise = new Promise((resolve, reject) => {
+      wx.request({
+        url: 'http://bl.7yue.pro/v1/classic/latest',
+        header: {
+          appkey: "8QYNSyklcIJ2r0UYgZzK"
+        },
+        success: (res) => {
+          resolve(res)
         }
+      })
+    })
+    promise.then((res) => {
+      let dataLink = res.data;
+      if (res.statusCode === 200) {
+        this.setData({
+          fav_nums: dataLink.fav_nums
+        })
       }
     })
   },

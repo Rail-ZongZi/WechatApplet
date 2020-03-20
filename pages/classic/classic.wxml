@@ -1,2 +1,4 @@
 <!--pages/classic/classic.wxml-->
 <v-link/>
+
+<text>{{fav_nums}}</text>
