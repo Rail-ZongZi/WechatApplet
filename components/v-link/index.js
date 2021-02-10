@@ -30,6 +30,7 @@ Component({
    */
   methods: {
     onLink: function (event) {
+      console.log(event)
       let TextLink = this.properties.linkText
       let ImgLink = this.properties.linkImg
       TextLink = ImgLink ? TextLink + 1 : TextLink - 1

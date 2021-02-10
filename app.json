@@ -1,12 +1,39 @@
 {
   "pages": [
-    "pages/classic/classic"
+    "pages/classic/classic",
+    "pages/book/book",
+    "pages/my/my"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "林间有风",
+    "navigationBarTitleText": "读书阅读小程序",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#999",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/classic/classic",
+        "text": "流行",
+        "iconPath": "./image/tabbar/classic.png",
+        "selectedIconPath": "./image/tabbar/classic@highlight.png"
+      },
+      {
+        "pagePath": "pages/book/book",
+        "text": "书单",
+        "iconPath": "./image/tabbar/book.png",
+        "selectedIconPath": "./image/tabbar/book@highlight.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "喜欢",
+        "iconPath": "./image/tabbar/my.png",
+        "selectedIconPath": "./image/tabbar/my@highlight.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -1,5 +1,4 @@
-<!--components/v-link/index.wxml-->
 <view bindtap="onLink" class="container">
-  <image src="{{linkImg ? yesLinkImg : noLinkImg}}"></image>
-  <text>{{linkText}}</text>
+  <image class="link-img" src="{{linkImg ? yesLinkImg : noLinkImg}}" />
+  <text class="link-text">{{linkText}}</text>
 </view>
