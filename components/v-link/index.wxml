@@ -1,0 +1,4 @@
+<view bindtap="onLink" class="container">
+  <image class="link-img" src="{{linkImg ? yesLinkImg : noLinkImg}}" />
+  <text class="link-text">{{linkText}}</text>
+</view>
